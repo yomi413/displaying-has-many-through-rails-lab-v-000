@@ -1,6 +1,8 @@
-<% Appointment.all.each do |appointment| %>
-  <%= appointment.datetime_in_human_readable_format %>
-<% end %>
+<%= @doctor.appointments.datetime_in_human_readable_format %>
+
+
+
+
 
 <% Patient.all.each do |patient| %>
   <%= link_to patient.name, patient_path(patient) %>
